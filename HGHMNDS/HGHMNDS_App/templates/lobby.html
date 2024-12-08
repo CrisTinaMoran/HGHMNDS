@@ -8,7 +8,6 @@
     <title>HGHMNDS | Home</title>
     <link rel="stylesheet" href="{% static 'css/styles.css' %}">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-
 </head>
 
 <body>
@@ -21,16 +20,28 @@
                         <li><a href="#rush-hours"><span>SHOP HOURS</span></a></li>
                         <li><a href="#location"><span>LOCATION</span></a></li>
                         <li><a href="#contact"><span>CONTACT</span></a></li>
-                        <li><i class="fas fa-search" style="font-size: 50px;"></i></li>
-                        <li><i class="fas fa-user" style="font-size: 50px;"></i></li>
-                        <li><i class="fas fa-cart-shopping" style="font-size: 50px;"></i></li>
+                        <li><button popovertarget="search-nav"><i class="fas fa-search" style="font-size: 50px;"></i></button></li>
+                        <li><button popovertarget="user-nav"><i class="fas fa-user" style="font-size: 50px;"></i></button></li>
+                        <li><button popovertarget="cart-nav"><i class="fas fa-cart-shopping" style="font-size: 50px;"></i></button></li>
                     </ul>
                 </nav>
             </div>
         </header>
         
         <main>
-      
+            <div id="search-nav" popover>
+                Jumbo
+            </div>
+            <div id="user-nav" popover>
+                <h1>Already have an account?</h1>
+                <button class='rdir-Login'>{% url 'login' %}</button>
+                <h1>Don't have an account?</h1>
+                <button class='rdir-register'>{% url 'register' %}</button>
+            </div>
+            <div id="cart-nav" popover>
+                HATDOG
+            </div>
+            
         </main>
     </div>
 </body>

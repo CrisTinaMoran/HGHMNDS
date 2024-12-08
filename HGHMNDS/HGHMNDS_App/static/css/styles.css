@@ -3,6 +3,11 @@
     src: url('font/Provicali.otf') format('opentype');
 }
 
+button{
+    all: unset;
+    cursor: pointer;
+}
+
 body {
     margin: 0;
     padding: 0;
