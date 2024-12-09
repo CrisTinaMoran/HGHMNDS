@@ -16,7 +16,7 @@
             <div class="header-container">
                 <nav>
                     <ul>
-                        <li><a href="lobby.html"><h1 class="logo">HGHMNDS.</h1></a></li>
+                        <li><a href="{% url 'lobby' %}"><h1 class="logo">HGHMNDS.</h1></a></li>
                         <li><a href="#rush-hours"><span>SHOP HOURS</span></a></li>
                         <li><a href="#location"><span>LOCATION</span></a></li>
                         <li><a href="#contact"><span>CONTACT</span></a></li>
@@ -34,10 +34,10 @@
             </div>
             <div id="user-nav" popover>
                 <h1>Already have an account?</h1>
-                <button class='rdir-Login'>{% url 'login' %}</button>
+                <button class="rdir" onclick="window.location.href='{% url 'login' %}'">Login</button>
                 <h1>Don't have an account?</h1>
-                <button class='rdir-register'>{% url 'register' %}</button>
-            </div>
+                <button class="rdir" onclick="window.location.href='{% url 'register' %}'">Register</button>
+            </div>            
             <div id="cart-nav" popover>
                 HATDOG
             </div>
