@@ -28,7 +28,7 @@ header {
     padding: 20px 50px;
 }
 
-header h1.logo {
+h1.logo {
     font-family: 'Provicali', sans-serif;
     font-size: 90px;
     letter-spacing: 5px;
@@ -96,4 +96,34 @@ div [popover] {
     font-weight: 200;
     text-align:  center;
     color: #f2f2f2;
+}
+
+/* Default state: show the top navbar */
+header {
+    display: block;
+}
+
+#sidebar {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 300px;
+    height: 100%;
+    background-color: #f2f2f2;
+    color: white;
+    padding: 20px;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.5);
+    
+}
+
+/* When screen width is below 1500px, hide the top nav and show the sidebar */
+@media (max-width: 1500px) {
+    header {
+        display: none;
+    }
+
+    #sidebar {
+        display: block;
+    }
 }
