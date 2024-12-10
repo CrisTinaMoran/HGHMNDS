@@ -25,13 +25,13 @@ header {
     left: 0px;
     right: 0;
     background-color: #fff;
-    padding: 20px 50px;
+    padding: 10px 20px;
 }
 
 h1.logo {
     font-family: 'Provicali', sans-serif;
-    font-size: 90px;
-    letter-spacing: 5px;
+    font-size: 50px;
+    letter-spacing: 2px;
     font-weight: bold;
     margin: 0;
     color: #000000;
@@ -39,7 +39,7 @@ h1.logo {
 
 header nav ul {
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
     gap: 2rem;
     list-style: none;
@@ -49,8 +49,7 @@ header nav ul {
 
 header nav ul li a {
     font-family: 'helvetica', sans-serif;
-    font-weight: bold;
-    font-size: 31px;
+    font-size: 20px;
     text-decoration: none;
     color: #121212;
     text-transform: uppercase;
@@ -58,6 +57,24 @@ header nav ul li a {
     justify-content: space-between;
     align-items: center;
 }
+
+nav {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-left ul li,
+.nav-right ul li {
+    margin: 0 10px;
+}
+
+.nav-left a {
+    text-decoration: none;
+    color: inherit;
+}
+
 
 /* POPOVER DESIGN */
 
@@ -74,12 +91,10 @@ div [popover] {
 }
 
 #user-nav::backdrop {
-    backdrop-filter: blur(4px);
     background: #12121299;
 }
 
 #cart-nav::backdrop {
-    backdrop-filter: blur(4px);
     background: #12121299;
 }
 
@@ -92,30 +107,80 @@ div [popover] {
     outline: none;
     cursor: pointer;
     font-family:  'open sans', sans-serif;
-    font-size: clamp(1em, 1.2vw, 4em);
+    font-size: clamp(10px, 1vw, 50px);
     font-weight: 200;
     text-align:  center;
     color: #f2f2f2;
 }
 
-/* Default state: show the top navbar */
-header {
-    display: block;
-}
+/* SIDEBAR when device is small*/
 
-#sidebar {
-    display: none;
+.sidebar{
     position: fixed;
     top: 0;
     left: 0;
-    width: 300px;
     height: 100%;
-    background-color: #f2f2f2;
-    color: white;
-    padding: 20px;
-    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.5);
-    
+    width: 300px;
+    background: #f2f2f2;
+    padding: 6px 14px;
 }
+
+.logo_content .logo .logo_name {
+    font-family: 'Provicali', sans-serif;
+    font-size: 50px;
+    text-align: center;
+    letter-spacing: 1px;
+    font-weight: bold;
+    margin: 20px;
+    color: #000000;
+}
+
+.sidebar #btn {
+    position: absolute;
+    color: #121212;
+    left: 90%;
+    top: 0;
+    font-size: 20px;
+    height: 50px;
+    width: 50px;
+    text-align: center;
+    line-height: 50px;
+    transform: translateX(-50%);
+}
+
+.sidebar ul {
+    margin-top: 20px;
+}
+
+.sidebar ul li{
+    position: relative;
+    height: 30px;
+    width: 100%;
+    margin: 0 5px;
+    list-style: none;
+    line-height: 50px;
+}
+
+.sidebar ul li a {
+    font-family: 'Helvetica', sans-serif;
+    color: #121212;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    transition: all 0.4s ease;
+}
+
+.sidebar ul li a:hover{
+    background-color: #CCCCCC;
+}
+
+.sidebar ul li a i{
+    height: 50px;
+    min-width: 50px;
+    line-height: 50px;
+    text-align: center;
+}
+
 
 /* When screen width is below 1500px, hide the top nav and show the sidebar */
 @media (max-width: 1500px) {

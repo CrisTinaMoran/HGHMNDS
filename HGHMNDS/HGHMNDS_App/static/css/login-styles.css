@@ -28,7 +28,7 @@ header {
     padding: 20px 50px;
 }
 
-header h1.logo {
+h1.logo {
     font-family: 'Provicali', sans-serif;
     font-size: clamp(20px, 5vw, 90px);
     letter-spacing: clamp(0.1px, 0.3vw, 3px);

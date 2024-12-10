@@ -15,19 +15,24 @@
         <header>
             <div class="header-container">
                 <nav>
-                    <ul>
-                        <li><a href="{% url 'lobby' %}"><h1 class="logo">HGHMNDS.</h1></a></li>
-                        <li><a href="#rush-hours"><span>SHOP HOURS</span></a></li>
-                        <li><a href="#location"><span>LOCATION</span></a></li>
-                        <li><a href="#contact"><span>CONTACT</span></a></li>
-                        <li><button popovertarget="search-nav"><i class="fas fa-search" style="font-size: 50px;"></i></button></li>
-                        <li><button popovertarget="user-nav"><i class="fas fa-user" style="font-size: 50px;"></i></button></li>
-                        <li><button popovertarget="cart-nav"><i class="fas fa-cart-shopping" style="font-size: 50px;"></i></button></li>
-                    </ul>
+                    <div class="nav-left">
+                        <ul>
+                            <li><a href="{% url 'lobby' %}"><h1 class="logo">HGHMNDS.</h1></a></li>
+                            <li><a href="#rush-hours"><span>SHOP HOURS</span></a></li>
+                            <li><a href="#location"><span>LOCATION</span></a></li>
+                            <li><a href="#contact"><span>CONTACT</span></a></li>
+                        </ul>
+                    </div>
+                    <div class="nav-right">
+                        <ul>
+                            <li><button popovertarget="search-nav"><i class="fas fa-search" style="font-size: 20px;"></i></button></li>
+                            <li><button popovertarget="user-nav"><i class="fas fa-user" style="font-size: 20px;"></i></button></li>
+                            <li><button popovertarget="cart-nav"><i class="fas fa-cart-shopping" style="font-size: 20px;"></i></button></li>
+                        </ul>
+                    </div>
                 </nav>
-            </div>
+            </div>            
         </header>
-        
         <main>
             <div id="search-nav" popover>
                 Jumbo
@@ -41,19 +46,47 @@
             <div id="cart-nav" popover>
                 HATDOG
             </div>
-
-            <div id="sidebar" class="sidebar">
-                <nav class="sidebar">
-                    <div class="image-text">
-                        <i class="fas fa-bars" style="color: #121212; font-size: 30px;" alt="Menu">
-                        </i>
-                        
-                        <div class="header-text">
-                            <h1 class="logo">HGHMNDS.</h1>
-                        </div>
-
+            
+            <div class="sidebar">
+                <div class="logo_content">
+                    <div class="logo">
+                        <h1 class="logo_name">HGHMNDS.</h1>
                     </div>
-                </nav>
+                    <i class="fas fa-bars" id='btn'></i>
+                </div>
+                <ul class="nav-list">
+                    <li>
+                        <i class="fas fa-magnifying-glass"></i>
+                        <input type="text" placeholder="Search...">
+                    </li>
+                    <li>
+                        <a href="">
+                            <i class="fas fa-bag-shopping"></i>
+                            <span class="links_name">SHOP</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <i class="fas fa-location-dot"></i>
+                            <span class="links_name">LOCATIONS</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <i class="fas fa-bolt"></i>
+                            <span class="links_name">CONTACT</span>
+                        </a>
+                    </li>
+                </ul>
+                <div class="profile_content">
+                    <div class="profile">
+                        <ul>
+                            <li><button popovertarget="user-nav"><i class="fas fa-user" style="font-size: 20px;"></i></button></li>
+                            <li><button popovertarget="cart-nav"><i class="fas fa-cart-shopping" style="font-size: 20px;"></i></button></li>
+                            <li><button popovertarget="cart-nav"><i class="fas fa-right-from-bracket" style="font-size: 20px;"></i></button></li>                
+                        </ul>
+                    </div>
+                </div>
             </div>
             
         </main> 
