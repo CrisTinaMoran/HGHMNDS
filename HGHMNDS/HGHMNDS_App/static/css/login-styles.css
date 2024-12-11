@@ -69,7 +69,7 @@ form {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: clamp(50px, 5vw, 200px);
+    padding: clamp(10px, 2vw, 10px);
     background-color: #f2f2f2;
     border-radius: 25px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
